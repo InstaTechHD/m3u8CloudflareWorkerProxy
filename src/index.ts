@@ -36,7 +36,7 @@ async function respondfetch(request) {
         if (line.startsWith("#") || line.trim() == '') {
           return line;
         }
-        else if(proxyAll == 'yes' && line.startsWith('http')){ //https://yourproxy.com/?url=https://somevideo.m3u8&all=yes
+        else if(proxyAll == 'yes' && line.startsWith('http')){ https://m3u8proxy.useapolloapp.workers.dev/?url=https://shizuru.vercel.app&all=yes
           return `${url.origin}?url=${line}`;
         }
         return `?url=${targetUrlTrimmed}${line}${originUrl ? `&origin=${encodedOrigin}` : ""
